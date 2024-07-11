@@ -38,14 +38,14 @@ class RssItem {
             .findElements('description')
             .firstOrNull
             ?.parseText(parseHtml),
-        link: element.findElements('link').firstOrNull?.text,
+        link: element.findElements('link').firstOrNull?.innerText,
         categories:
             element.findElements('category').map(RssCategory.parse).toList(),
-        guid: element.findElements('guid').firstOrNull?.text,
+        guid: element.findElements('guid').firstOrNull?.innerText,
         pubDate: parseDateTime(
-          element.findElements('pubDate').firstOrNull?.text,
+          element.findElements('pubDate').firstOrNull?.innerText,
         ),
-        author: element.findElements('author').firstOrNull?.text,
+        author: element.findElements('author').firstOrNull?.innerText,
         comments:
             element.findElements('comments').firstOrNull?.parseText(parseHtml),
         source: element.findElements('source').map(RssSource.parse).firstOrNull,

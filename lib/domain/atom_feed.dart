@@ -38,11 +38,11 @@ class AtomFeed {
     }
 
     return AtomFeed(
-      id: feedElement.findElements('id').firstOrNull?.text,
+      id: feedElement.findElements('id').firstOrNull?.innerText,
       title:
           feedElement.findElements('title').firstOrNull?.parseText(parseHtml),
       updated: parseDateTime(
-        feedElement.findElements('updated').firstOrNull?.text,
+        feedElement.findElements('updated').firstOrNull?.innerText,
       ),
       items: feedElement
           .findElements('entry')
@@ -61,9 +61,9 @@ class AtomFeed {
           .findElements('generator')
           .map(AtomGenerator.parse)
           .firstOrNull,
-      icon: feedElement.findElements('icon').firstOrNull?.text,
-      logo: feedElement.findElements('logo').firstOrNull?.text,
-      rights: feedElement.findElements('rights').firstOrNull?.text,
+      icon: feedElement.findElements('icon').firstOrNull?.innerText,
+      logo: feedElement.findElements('logo').firstOrNull?.innerText,
+      rights: feedElement.findElements('rights').firstOrNull?.innerText,
       subtitle: feedElement
           .findElements('subtitle')
           .firstOrNull

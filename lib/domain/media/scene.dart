@@ -23,8 +23,9 @@ class Scene {
             .findElements('sceneDescription')
             .firstOrNull
             ?.parseText(parseHtml),
-        startTime: element.findElements('sceneStartTime').firstOrNull?.text,
-        endTime: element.findElements('sceneEndTime').firstOrNull?.text,
+        startTime:
+            element.findElements('sceneStartTime').firstOrNull?.innerText,
+        endTime: element.findElements('sceneEndTime').firstOrNull?.innerText,
       );
 
   /// The title of the scene

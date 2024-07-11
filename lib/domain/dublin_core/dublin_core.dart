@@ -35,18 +35,19 @@ class DublinCore {
             .findElements('dc:description')
             .firstOrNull
             ?.parseText(parseHtml),
-        creator: element.findElements('dc:creator').firstOrNull?.text,
+        creator: element.findElements('dc:creator').firstOrNull?.innerText,
         subject: element
             .findElements('dc:subject')
             .firstOrNull
             ?.parseText(parseHtml),
-        publisher: element.findElements('dc:publisher').firstOrNull?.text,
-        contributor: element.findElements('dc:contributor').firstOrNull?.text,
+        publisher: element.findElements('dc:publisher').firstOrNull?.innerText,
+        contributor:
+            element.findElements('dc:contributor').firstOrNull?.innerText,
         date: parseDateTime(
-          element.findElements('dc:date').firstOrNull?.text,
+          element.findElements('dc:date').firstOrNull?.innerText,
         ),
         created: parseDateTime(
-          element.findElements('dc:created').firstOrNull?.text,
+          element.findElements('dc:created').firstOrNull?.innerText,
         ),
         modified: parseDateTime(
           element.findElements('dc:modified').firstOrNull?.innerText,

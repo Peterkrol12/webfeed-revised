@@ -40,7 +40,7 @@ class Itunes {
     final durationStr =
         element.findElements('itunes:duration').firstOrNull?.innerText ?? '';
     return Itunes(
-      author: element.findElements('itunes:author').firstOrNull?.text,
+      author: element.findElements('itunes:author').firstOrNull?.innerText,
       summary: element
           .findElements('itunes:summary')
           .firstOrNull

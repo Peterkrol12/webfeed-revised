@@ -58,12 +58,12 @@ class RssFeed {
           .findElements('title')
           .firstOrNull
           ?.parseText(parseHtml),
-      author: channelElement.findElements('author').firstOrNull?.text,
+      author: channelElement.findElements('author').firstOrNull?.innerText,
       description: channelElement
           .findElements('description')
           .firstOrNull
           ?.parseText(parseHtml),
-      link: channelElement.findElements('link').firstOrNull?.text,
+      link: channelElement.findElements('link').firstOrNull?.innerText,
       items: (rdf ?? channelElement)
           .findElements('item')
           .map((item) => RssItem.parse(item, parseHtml))

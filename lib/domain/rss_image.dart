@@ -11,8 +11,8 @@ class RssImage {
   /// Parse constructor for the RssImage class, used when 'parsing' a feed
   factory RssImage.parse(XmlElement element, bool parseHtml) => RssImage(
         title: element.findElements('title').firstOrNull?.parseText(parseHtml),
-        url: element.findElements('url').firstOrNull?.text,
-        link: element.findElements('link').firstOrNull?.text,
+        url: element.findElements('url').firstOrNull?.innerText,
+        link: element.findElements('link').firstOrNull?.innerText,
       );
 
   /// The title of the image
