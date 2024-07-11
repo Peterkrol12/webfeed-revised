@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.8.1-beta](https://pub.dev/packages/webfeed_revised/versions/0.8.1-beta.1)
+- Contains the HTML parser functionality from 0.7.3-beta.1 and the improvements and updates from 0.8.0
+
 ## [0.8.0](https://pub.dev/packages/webfeed_revised/versions/0.8.0)
 - Upgrade to Dart 3.0
 - Upgrade xml: ^6.5.0
