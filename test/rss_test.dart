@@ -381,10 +381,8 @@ void main() {
       switch (category.category) {
         case 'Foo':
           expect(category.subCategories, ['Bar', 'Baz']);
-          break;
         case 'Technology':
           expect(category.subCategories, ['Software How-To', 'Tech News']);
-          break;
       }
     }
     expect(feed.itunes!.title, 'Go Time');
