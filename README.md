@@ -1,6 +1,6 @@
 # WebFeed Revised
 
-[![Pub](https://img.shields.io/pub/v/webfeed_revised.svg)](https://pub.dev/packages/webfeed-revised)
+[![Pub](https://img.shields.io/pub/v/webfeed_revised.svg)](https://pub.dev/packages/webfeed_revised)
 
 A dart package for parsing RSS and Atom feed.
 
@@ -20,7 +20,7 @@ Forked from [WebFeed - V0.7.0](https://pub.dev/packages/webfeed) and improved up
 
 Add this line into your `pubspec.yaml`
 ```
-webfeed_revised: ^0.7.2
+webfeed_revised: ^0.8.0
 ```
 
 Import the package into your dart code using:

@@ -1,9 +1,19 @@
 # Changelog
 
-## [0.7.2](https://pub.dev/packages/webfeed-revised/versions/0.7.2)
+## [0.8.0](https://pub.dev/packages/webfeed_revised/versions/0.8.0)
+- Upgrade to Dart 3.0
+- Upgrade xml: ^6.5.0
+- Upgrade intl: ^0.19.0 - [Thanks to @bugrevealingbme](https://github.com/Peterkrol12/webfeed-revised/pull/10)
+- Force RFC822 datetime to be parsed with `en_US` locale - [Thanks to @bbo76](https://github.com/Peterkrol12/webfeed-revised/pull/9)
+
+## [0.7.3-beta](https://pub.dev/packages/webfeed_revised/versions/0.7.3-beta.1)
+- Fixed html parser function
+- Adds the ability to automatically parse and replace HTML tags from some elements of the RSS feed
+
+## [0.7.2](https://pub.dev/packages/webfeed_revised/versions/0.7.2)
 - Applied dart format
 
-## [0.7.1](https://pub.dev/packages/webfeed-revised/versions/0.7.1)
+## [0.7.1](https://pub.dev/packages/webfeed_revised/versions/0.7.1)
 - Updated dependencies
 - Fixed RssItem pubDate optional seconds
 - Added RssItem pubDate UTC parser
