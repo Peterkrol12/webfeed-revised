@@ -49,16 +49,17 @@ class DublinCore {
           element.findElements('dc:created').firstOrNull?.text,
         ),
         modified: parseDateTime(
-          element.findElements('dc:modified').firstOrNull?.text,
+          element.findElements('dc:modified').firstOrNull?.innerText,
         ),
-        type: element.findElements('dc:type').firstOrNull?.text,
-        format: element.findElements('dc:format').firstOrNull?.text,
-        identifier: element.findElements('dc:identifier').firstOrNull?.text,
-        source: element.findElements('dc:source').firstOrNull?.text,
-        language: element.findElements('dc:language').firstOrNull?.text,
-        relation: element.findElements('dc:relation').firstOrNull?.text,
-        coverage: element.findElements('dc:coverage').firstOrNull?.text,
-        rights: element.findElements('dc:rights').firstOrNull?.text,
+        type: element.findElements('dc:type').firstOrNull?.innerText,
+        format: element.findElements('dc:format').firstOrNull?.innerText,
+        identifier:
+            element.findElements('dc:identifier').firstOrNull?.innerText,
+        source: element.findElements('dc:source').firstOrNull?.innerText,
+        language: element.findElements('dc:language').firstOrNull?.innerText,
+        relation: element.findElements('dc:relation').firstOrNull?.innerText,
+        coverage: element.findElements('dc:coverage').firstOrNull?.innerText,
+        rights: element.findElements('dc:rights').firstOrNull?.innerText,
       );
 
   /// The title of the resource

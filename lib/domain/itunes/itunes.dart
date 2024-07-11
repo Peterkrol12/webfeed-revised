@@ -34,11 +34,11 @@ class Itunes {
   /// Parse constructor for the Itunes class, used when 'parsing' a feed
   factory Itunes.parse(XmlElement element, bool parseHtml) {
     final episodeStr =
-        element.findElements('itunes:episode').firstOrNull?.text ?? '';
+        element.findElements('itunes:episode').firstOrNull?.innerText ?? '';
     final seasonStr =
-        element.findElements('itunes:season').firstOrNull?.text ?? '';
+        element.findElements('itunes:season').firstOrNull?.innerText ?? '';
     final durationStr =
-        element.findElements('itunes:duration').firstOrNull?.text ?? '';
+        element.findElements('itunes:duration').firstOrNull?.innerText ?? '';
     return Itunes(
       author: element.findElements('itunes:author').firstOrNull?.text,
       summary: element
@@ -61,7 +61,7 @@ class Itunes {
       keywords: element
               .findElements('itunes:keywords')
               .firstOrNull
-              ?.text
+              ?.innerText
               .split(',')
               .map((keyword) => keyword.trim())
               .toList() ??
@@ -75,7 +75,8 @@ class Itunes {
           .map(ItunesCategory.parse)
           .toList(),
       type: element.findElements('itunes:type').map(newItunesType).firstOrNull,
-      newFeedUrl: element.findElements('itunes:new-feed-url').firstOrNull?.text,
+      newFeedUrl:
+          element.findElements('itunes:new-feed-url').firstOrNull?.innerText,
       block: parseBoolLiteral(element, 'itunes:block'),
       complete: parseBoolLiteral(element, 'itunes:complete'),
       episode: episodeStr.isNotEmpty ? int.tryParse(episodeStr) : null,
