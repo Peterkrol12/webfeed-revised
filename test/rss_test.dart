@@ -373,7 +373,7 @@ void main() {
     expect(
       {
         feed.itunes!.categories![0].category,
-        feed.itunes!.categories![1].category
+        feed.itunes!.categories![1].category,
       },
       ['Technology', 'Foo'],
     );
