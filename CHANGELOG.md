@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.9.0](https://pub.dev/packages/webfeed_revised/versions/0.9.0)
+- Upgrade intl: ^0.20.0
+
 ## [0.8.0](https://pub.dev/packages/webfeed_revised/versions/0.8.0)
 - Upgrade to Dart 3.0
 - Upgrade xml: ^6.5.0
