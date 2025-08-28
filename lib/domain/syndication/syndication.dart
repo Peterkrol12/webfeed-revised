@@ -45,7 +45,6 @@ class Syndication {
         updatePeriod = SyndicationUpdatePeriod.yearly;
       default:
         updatePeriod = SyndicationUpdatePeriod.daily;
-        break;
     }
     return Syndication(
       updatePeriod: updatePeriod,
